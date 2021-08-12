@@ -7,9 +7,13 @@ phases:
   pre_build:
     commands:
       - echo "installation of npm"
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling
+      - npm run build
   post_build:
     commands:
-      - npm run build
       - echo Build completed
 artifacts:
   files:
